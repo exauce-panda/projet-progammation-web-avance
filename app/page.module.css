@@ -1,8 +1,3 @@
-.top{
-    background-color: #333;
-}
-
-.down{
-    background-color: black;
-    color: azure;
+.main {
+  background-color: chartreuse;
 }

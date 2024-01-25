@@ -1,33 +1,20 @@
-.nav {
-    background-color: black;
-    padding: 2rem;
-}
 
+.nav {
+    padding: 0.2rem;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    background-color: #000;
+}
 .nav ul {
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   gap: 20px;
-   padding: 0;
-   margin: 0;
-   list-style-type: none;
+    
+    display: flex;
+    gap: 1rem;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
 }
 
 .nav a {
-    color: azure;
-    text-decoration: none;
-    border-radius: 10px;
-    padding: 15px 10px;
-    background-color: transparent;
-    transition: color 0.3s, background-color 0.3s;
+    color: #ffffff;
 }
-
-
-/* faire la mise a jour et garder le lien clicker blanche et le texte noire lorsque l'utilisateur click dessus */
-
-.nav a:hover, .nav a:focus {
-    color: black;
-    background-color: azure;
-}
-
-
