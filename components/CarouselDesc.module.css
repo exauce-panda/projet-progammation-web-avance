@@ -1,0 +1,44 @@
+.carousel {
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+    max-width: 600px;
+    margin: 0 auto;
+    padding-top: 5rem;
+    margin-top: 1px;
+}
+
+
+.carouselInner {
+    display: flex;
+    animation: slide 20s linear infinite; 
+}
+
+.carouselSlide {
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+
+  
+.carousel img {
+    max-width: 100%;
+    height: auto;
+}
+  
+@keyframes slide {
+    0% {
+        transform: translateX(0%);
+    }
+    25% {
+        transform: translateX(-100%);
+    }
+    50% {
+        transform: translateX(-200%);
+    }
+    75% {
+        transform: translateX(-300%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}  
