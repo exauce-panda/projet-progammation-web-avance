@@ -1,0 +1,16 @@
+.faqStyle{
+    font-size: 150%;
+    text-align: justify;
+    padding-left: 6%;
+    padding-right: 6%;
+    padding-top: 3%;
+}
+
+.faqStyle li {
+    list-style-type:square;
+    color: rgb(41, 41, 41);
+}
+
+.mail{
+    color :rgb(141, 141, 141)
+}

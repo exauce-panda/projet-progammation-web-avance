@@ -5,8 +5,26 @@
     text-align: justify; 
     width: 70%;
     padding-top: 5rem;
+    padding-bottom: 5rem;
     height: 100%;
-    min-height: 15rem;
     margin: 0 auto;
 }
 
+.readMore,
+.readLess {
+  background-color: #000; 
+  border: none;
+  cursor: pointer;
+  color: azure; 
+  font-size: 16px;
+  margin-top: 10px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.readMore:hover,
+.readLess:hover {
+  background-color: azure; 
+  color: #000; 
+}
