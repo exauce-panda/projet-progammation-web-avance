@@ -1,0 +1,68 @@
+.eventImage{
+    width: 100rem;
+    max-height: 70rem;
+}
+
+.eventImage img{
+    width: 100%; 
+    max-height: 60rem;
+    height: 100%;
+}
+
+.ticketQuantity button {
+    padding: 5px 10px;
+    margin: 0 5px;
+    background-color: #ddd;
+    border: none;
+    cursor: pointer;
+    border-radius: px;
+  }
+  
+  .ticketQuantity span {
+    padding: 5px 10px;
+  }
+  
+  .submitButton {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+
+
+  /*
+
+  .eventPageContainer {
+    text-align: center;
+    margin-top: 50px;
+  }
+  
+  .eventImage {
+    margin-bottom: 20px;
+    max-width: 40rem;
+    height: 20rem;
+  }
+  .eventTitle {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+  
+  .eventDate {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 20px;
+  }
+  
+  .eventDescription {
+    margin-bottom: 30px;
+  }
+  
+  .ticketManagement {
+    margin-bottom: 20px;
+  }
+  
+
+  
+  */

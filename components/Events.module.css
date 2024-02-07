@@ -1,0 +1,33 @@
+.imgEv{
+  max-width: 22rem;
+  width: 100%;
+  height: 25rem;
+  margin-left: auto;
+  margin-right: auto; 
+  display: block; 
+  transition: 0.5s;
+}
+
+.imgEv:hover {
+  transform: scale(1.05);
+  transition: 0.5s;
+}
+
+.titleEven{
+  font-size: 2rem;
+  text-decoration: none;
+}
+
+.titleEven:hover {
+  text-decoration: underline;
+}
+
+
+.dateEven{
+  width: 100%;
+  height: 50px;
+}
+
+.btnEven{
+  background-color: rebeccapurple;
+}

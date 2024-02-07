@@ -1,0 +1,25 @@
+.bob img{
+    max-width: 30rem;
+    max-height: 26rem;
+    transition: 0.3s;
+}
+
+.bob img:hover {
+    transform: scale(1.03);
+    cursor: pointer;
+}
+
+.divDescription a {
+    text-decoration: none;
+    font-size: 2rem;
+}
+
+.divDescription a:hover {
+    text-decoration: underline;
+
+}
+
+.bob .backDiv{
+    background-color: black;
+    color: azure;
+}
