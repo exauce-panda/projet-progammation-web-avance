@@ -1,0 +1,15 @@
+.notFound{
+    font-size: xx-large;
+}
+
+@media (max-width: 274px) {
+   
+    .principale {
+
+    min-width: 20rem;
+    min-height: 100vh;
+
+    text-align: justify;
+
+    }
+}

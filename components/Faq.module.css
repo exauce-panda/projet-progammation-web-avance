@@ -1,0 +1,11 @@
+@media (max-width: 274px) {
+   
+    .pageFaq {
+        
+    min-width: 20rem;
+    min-height: 300vh;
+    text-align: justify;
+    
+    }
+    
+}
