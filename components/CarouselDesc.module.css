@@ -1,23 +1,23 @@
 .carou {
-    max-width: 50rem;
-    width: 100%;
+  max-width: 50rem;
+  width: 100%;
 }
 
 .carouImageContainer {
-    height: 500px; 
-    position: relative;
-    width: 100%;
+  height: 500px; 
+  position: relative;
+  width: 100%;
 }
 
 @media (max-width: 576px) { 
-    .carouImageContainer {
-      height: 200px;
-    }
+  .carouImageContainer {
+    height: 200px;
   }
+}
 
 .carouImage {
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-    position: absolute;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  position: absolute;
 }

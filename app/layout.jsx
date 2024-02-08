@@ -77,6 +77,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <Head>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
         {/* Préchargement de la première image d'événement pour améliorer la performance de chargement */}
 
         {allEvents.length > 0 && (
@@ -87,9 +90,9 @@ export default function RootLayout({ children }) {
           />
         )}
       </Head>
-      <body className={`${montserrat.className} d-flex flex-column min-vh-100`}>
+      <body className={`${montserrat.className} ${styles.principale} d-flex flex-column`}>
         <Header setPage={setPage} />
-        <main className={`container-fluide flex-grow-1`}>
+        <main className={`${styles.bob} container-fluide flex-grow-1 min-vh-100`}>
           {
             page === 'Home' ?
             <Home setPage={setPage} allEvents={allEvents} setPageId={setPageId}/> 

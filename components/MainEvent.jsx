@@ -33,11 +33,13 @@ export default function MainEvent({setPage, allEvents, setPageId}) {
 
                             {/* Corps de la carte contenant le titre, la date et une description de l'événement */}
 
-                            <div className={`${styles.divDescription} card-body mx-auto text-center mt-3 p-5`}>
+                            <div className={`${styles.divDescription} card-body mx-auto text-center mt-3 py-5`}>
 
                                 {/* Titre de l'événement comme lien cliquable */}
 
-                                <a href="#" onClick={() => { setPage('pageEvent'); setPageId(event.id.toString()); } } className='text-white'>{event.title}</a>
+                                <h2 className={`${styles.titre} `}>
+                                    <a href="#" onClick={() => { setPage('pageEvent'); setPageId(event.id.toString()); } } className={`text-white  ${styles.titleEven}`} >{event.title}</a>
+                                </h2>
                                 
                                 {/* Date de l'événement */}
 

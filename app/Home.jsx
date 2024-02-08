@@ -11,13 +11,13 @@ export default function Page({setPage, allEvents, setPageId}) {
     <>
       {/* Section contenant la description de l'Alpha Center */}
 
-      <div className={`container-fluid bg-dark p-4`}>
+      <div className={`container-fluid bg-dark py-4`}>
         <DescAlpha />
       </div>
       
       {/* Section affichant les événements principaux */}
 
-      <div className={`${styles.down} container-fluid p-4`}>
+      <div className={`${styles.down} container-fluid py-4`}>
         <MainEven setPage = {setPage} allEvents = {allEvents} setPageId={setPageId} />
       </div>
     </>

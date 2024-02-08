@@ -34,13 +34,15 @@ export default function Events({setPage, allEvents, setPageId}) {
         {/* Mapping des événements de la page actuelle pour affichage */}
         
         {currentEvents.map((event) => (
-          <div className={`col-sm-6 mb-5 text-center`} key={event.id}>
+          <div className={`col-sm-6 mb-5 text-center ${styles.divEvent}`} key={event.id}>
 
             <a href="#" onClick={() => { setPage('pageEvent'); setPageId(event.id.toString()); } } className='text-center'>
               <Image src={event.image} alt={`Image for ${event.title}`} className={`mb-5 ${styles.imgEv}`}  priority={event.id === 1} />
             </a>
-            <a href="#" onClick={() => { setPage('pageEvent'); setPageId(event.id.toString()); } } className={`text-white ${styles.titleEven}`} >{event.title}</a>
-            <p className={`${styles.dateEven} my-3`}>{event.date}</p> 
+            <h2 className={`${styles.titre} `}>
+              <a href="#" onClick={() => { setPage('pageEvent'); setPageId(event.id.toString()); } } className={`text-white  ${styles.titleEven}`} >{event.title}</a>
+            </h2>
+            <p className={`${styles.dateEven} `}>{event.date}</p> 
             <div className="d-flex flex-column align-items-center mt-3">
               <p className={`description ${styles.descEven} mb-3 text-start`}>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cupiditate magni natus veritatis deserunt iste ut quidem in? Necessitatibus ratione voluptatem fugit officia labore modi nam, sint natus est iure vitae!</p>
               <button onClick={() => { setPage('pageEvent'); setPageId(event.id.toString()); } } className={`${styles.btnEven} btn btn-danger w-100 mt-3 `}>Take a Ticket</button> 
