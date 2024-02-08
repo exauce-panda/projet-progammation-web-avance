@@ -1,0 +1,21 @@
+.forumId{
+    height: 7rem;
+
+}
+
+.forumMessage{
+    height: 14rem;
+
+}
+
+@media (max-width: 274px) {
+   
+    .pageContact {
+
+    min-width: 20rem;
+    min-height: 300vh;
+    text-align: start;
+    
+    }
+    
+}

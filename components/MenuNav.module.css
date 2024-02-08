@@ -1,0 +1,39 @@
+.container-fluid {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  
+  .nav {
+    background-color: black;
+    padding: 2rem 0; 
+  }
+  
+  .nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+  }
+  
+  .nav a {
+    color: azure;
+    text-decoration: none;
+    padding: 15px 7px;
+    border-radius: 10px;
+    background-color: transparent;
+    transition: color 0.3s, background-color 0.3s;
+  }
+  
+  .nav a:hover, .nav a:focus {
+    color: black;
+    background-color: white;
+  }
+  
+  .activeLink {
+    color: black !important;
+    background-color: azure !important;
+  }
+  

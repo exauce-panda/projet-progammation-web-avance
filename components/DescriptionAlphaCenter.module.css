@@ -1,0 +1,8 @@
+.bob button{
+  background-color: black;
+  color: azure;
+}
+.bob button:hover {
+  background-color: rgb(74, 73, 73);
+  color: azure;
+}
