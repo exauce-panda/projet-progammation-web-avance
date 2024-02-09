@@ -1,17 +1,12 @@
 .notFound{
-    font-size: xx-large;
+    font-size: xx-large; /* Définit la taille de la police pour les éléments avec la classe .notFound */
 }
 
-/*pour gerer le visuel de petites appareils etc... */
-
+/* Pour gérer le visuel sur les petits appareils, etc. */
 @media (max-width: 274px) {
-   
     .principale {
-
-    min-width: 20rem;
-    min-height: 100vh;
-
-    text-align: justify;
-
+        min-width: 20rem; /* Définit la largeur minimale */
+        min-height: 100vh; /* Définit la hauteur minimale */
+        text-align: justify; /* Justifie le texte */
     }
 }
