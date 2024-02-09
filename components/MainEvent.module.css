@@ -1,39 +1,46 @@
-.bob img{
-    max-width: 30rem;
-    max-height: 26rem;
-    transition: 0.3s;
+/* Styles pour les images principales */
+.bob img {
+    max-width: 30rem; /* Largeur maximale des images */
+    max-height: 26rem; /* Hauteur maximale des images */
+    transition: 0.3s; /* Transition au survol de l'image */
 }
 
+/* Animation au survol de l'image */
 .bob img:hover {
-    transform: scale(1.03);
-    cursor: pointer;
+    transform: scale(1.03); /* Légère augmentation de la taille de l'image */
+    cursor: pointer; /* Curseur de la souris change en pointeur */
 }
 
+/* Styles pour les liens dans la description */
 .divDescription a {
-    text-decoration: none;
-    font-size: 2rem;
+    text-decoration: none; /* Suppression du soulignement des liens */
+    font-size: 2rem; /* Taille de police des liens */
 }
 
+/* Effet au survol des liens dans la description */
 .divDescription a:hover {
-    text-decoration: underline;
-
+    text-decoration: underline; /* Soulignement des liens au survol */
 }
 
-.bob .backDiv{
-    background-color: black;
-    color: azure;
+/* Styles pour le fond des div de description */
+.bob .backDiv {
+    background-color: black; /* Couleur de fond des div de description */
+    color: azure; /* Couleur du texte des div de description */
 }
 
-.titre{
-    height: 5rem;
-    margin-bottom: 1px;
-  }
-  
-.titleEven{
-    font-size: 2rem;
-    text-decoration: none;
+/* Styles pour les titres */
+.titre {
+    height: 5rem; /* Hauteur des titres */
+    margin-bottom: 1px; /* Marge inférieure des titres */
 }
-  
+
+/* Styles pour les titres des événements */
+.titleEven {
+    font-size: 2rem; /* Taille de police des titres des événements */
+    text-decoration: none; /* Suppression du soulignement des titres des événements */
+}
+
+/* Effet au survol des titres des événements */
 .titleEven:hover {
-    text-decoration: underline;
+    text-decoration: underline; /* Soulignement des titres des événements au survol */
 }
