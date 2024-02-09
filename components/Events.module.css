@@ -1,40 +1,46 @@
-.imgEv{
-  max-width: 22rem;
-  width: 100%;
-  height: 25rem;
-  margin-left: auto;
-  margin-right: auto; 
-  display: block; 
-  transition: 0.5s;
+/* Styles pour les images des événements */
+.imgEv {
+  max-width: 22rem; /* Largeur maximale de l'image */
+  width: 100%; /* Largeur de l'image à 100% */
+  height: 25rem; /* Hauteur de l'image */
+  margin-left: auto; /* Marge à gauche automatique */
+  margin-right: auto; /* Marge à droite automatique */
+  display: block; /* Affichage en bloc */
+  transition: 0.5s; /* Transition de 0.5 seconde pour les effets de survol */
 }
 
+/* Effet de survol pour les images */
 .imgEv:hover {
-  transform: scale(1.05);
-  transition: 0.5s;
+  transform: scale(1.05); /* Agrandissement de l'image */
+  transition: 0.5s; /* Transition de 0.5 seconde */
 }
 
-.titre{
-  height: 5rem;
-  margin-bottom: 1px;
+/* Styles pour le titre des événements */
+.titre {
+  height: 5rem; /* Hauteur du titre */
+  margin-bottom: 1px; /* Marge en bas */
 }
 
-.titleEven{
-  font-size: 2rem;
-  text-decoration: none;
+/* Styles pour le titre des événements */
+.titleEven {
+  font-size: 2rem; /* Taille de police du titre */
+  text-decoration: none; /* Pas de décoration de texte par défaut */
 }
 
+/* Effet de survol pour le titre des événements */
 .titleEven:hover {
-  text-decoration: underline;
+  text-decoration: underline; /* Soulignement du texte au survol */
 }
 
-
-.dateEven{
-  padding-top: 2rem;
-  padding-bottom: 4rem;
-  width: 100%;
-  height: 50px;
+/* Styles pour la date des événements */
+.dateEven {
+  padding-top: 2rem; /* Espacement en haut */
+  padding-bottom: 4rem; /* Espacement en bas */
+  width: 100%; /* Largeur de la date à 100% */
+  height: 50px; /* Hauteur de la date */
 }
 
-.btnEven{
-  background-color: rebeccapurple;
+/* Styles pour le bouton des événements */
+.btnEven {
+  background-color: rebeccapurple; /* Couleur de fond du bouton */
 }
