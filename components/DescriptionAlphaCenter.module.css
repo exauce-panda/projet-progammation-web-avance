@@ -1,7 +1,12 @@
+/* Définition des styles pour le composant DescriptionAlphaCenter */
+
+/* Styles pour le bouton "bob" */
 .bob button{
   background-color: black;
   color: azure;
 }
+
+/* Styles pour le survol du bouton "bob" */
 .bob button:hover {
   background-color: rgb(74, 73, 73);
   color: azure;
