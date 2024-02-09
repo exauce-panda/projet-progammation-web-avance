@@ -1,11 +1,9 @@
+/* Styles pour les petites tailles d'écran */
 @media (max-width: 274px) {
-   
+    /* Styles spécifiques à la page FAQ */
     .pageFaq {
-        
-    min-width: 20rem;
-    min-height: 300vh;
-    text-align: justify;
-    
+        min-width: 20rem; /* Largeur minimale de la page FAQ */
+        min-height: 300vh; /* Hauteur minimale de la page FAQ */
+        text-align: justify; /* Alignement du texte justifié */
     }
-    
 }
