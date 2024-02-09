@@ -1,32 +1,32 @@
 .eventImage{ /* Style pour la classe eventImage */
-    width: 100rem; /* Largeur maximale de 100rem */
-    max-height: 70rem; /* Hauteur maximale de 70rem */
+    width: 100rem; /* Largeur maximale pour les images des événements */
+    max-height: 70rem; /* Hauteur maximale pour les images des événements */
 }
 
 .eventImage img{ /* Style pour les images à l'intérieur de eventImage */
     width: 100%; /* Largeur de l'image à 100% */
-    max-height: 60rem; /* Hauteur maximale de l'image de 60rem */
+    max-height: 60rem; /* Hauteur maximale pour les images des événements */
     height: 100%; /* Hauteur de l'image à 100% */
 }
 
-.ticketQuantity button { /* Style pour les boutons dans ticketQuantity */
-    padding: 5px 10px; /* Rembourrage de 5px en haut et en bas, 10px à gauche et à droite */
-    margin: 0 5px; /* Marge de 0 en haut et en bas, 5px à gauche et à droite */
-    background-color: #ddd; /* Couleur de fond #ddd */
+.ticketQuantity button { /* Styles pour les boutons de sélection de quantité de billets */
+    padding: 5px 10px; /* Espacement intérieur du bouton */
+    margin: 0 5px; /* Marge autour du bouton */
+    background-color: #ddd; /* Couleur de fond du bouton */
     border: none; /* Pas de bordure */
-    cursor: pointer; /* Curseur pointeur */
+    cursor: pointer; /* Curseur de la souris au survol du bouton */
     border-radius: px; /* Rayon de bordure */
   }
   
   .ticketQuantity span { /* Style pour les spans dans ticketQuantity */
-    padding: 5px 10px; /* Rembourrage de 5px en haut et en bas, 10px à gauche et à droite */
+    padding: 5px 10px; /* Espacement intérieur du span  */
   }
   
-  .submitButton { /* Style pour le bouton submitButton */
-    padding: 10px 20px; /* Rembourrage de 10px en haut et en bas, 20px à gauche et à droite */
-    background-color: red; /* Couleur de fond rouge */
-    color: white; /* Couleur du texte blanc */
+  .submitButton { /* Styles pour le bouton de soumission */
+    padding: 10px 20px; /* Espacement intérieur du bouton */
+    background-color: red; /* Couleur de fond du bouton */
+    color: white; /* Couleur du texte du bouton */
     border: none; /* Pas de bordure */
     border-radius: 8px; /* Rayon de bordure de 8px */
-    cursor: pointer; /* Curseur pointeur */
+    cursor: pointer; /* Curseur de la souris au survol du bouton */
   }
