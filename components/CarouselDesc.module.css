@@ -1,20 +1,26 @@
+/* Définition des styles pour le carousel */
+
+/* Styles généraux du carousel */
 .carou {
   max-width: 50rem;
   width: 100%;
 }
 
+/* Conteneur des images du carousel */
 .carouImageContainer {
   height: 500px; 
   position: relative;
   width: 100%;
 }
 
+/* Styles pour les appareils de petite taille */
 @media (max-width: 576px) { 
   .carouImageContainer {
     height: 200px;
   }
 }
 
+/* Styles des images du carousel */
 .carouImage {
   object-fit: cover;
   width: 100%;
