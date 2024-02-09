@@ -1,4 +1,5 @@
-.eventsMain{
-    background-color: black;
-    color: azure;
+/* Styles pour le conteneur principal des événements */
+.eventsMain {
+    background-color: black; /* Fond noir */
+    color: azure; /* Texte en couleur azure */
 }
