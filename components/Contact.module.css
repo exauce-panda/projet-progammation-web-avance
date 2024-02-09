@@ -1,21 +1,22 @@
+/* Définition des styles pour le composant Contact */
+
+/* Styles pour l'identifiant du formulaire */
 .forumId{
     height: 7rem;
-
 }
 
+/* Styles pour le message du formulaire */
 .forumMessage{
     height: 14rem;
-
 }
 
+/* Styles pour les appareils de petite taille */
 @media (max-width: 274px) {
    
+    /* Ajustement des styles pour la page de contact */
     .pageContact {
-
-    min-width: 20rem;
-    min-height: 300vh;
-    text-align: start;
-    
+        min-width: 20rem;
+        min-height: 300vh;
+        text-align: start;
     }
-    
 }
