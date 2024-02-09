@@ -1,9 +1,17 @@
-.body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+.notFound{
+    font-size: xx-large;
 }
 
-.main {
-    flex: 1;
+/*pour gerer le visuel de petites appareils etc... */
+
+@media (max-width: 274px) {
+   
+    .principale {
+
+    min-width: 20rem;
+    min-height: 100vh;
+
+    text-align: justify;
+
+    }
 }

@@ -1,20 +1,27 @@
-import styles from "./MenuNav.module.css"
+import styles from './MenuNav.module.css'
 
-export default function MenuNav() {
-    return <nav className={styles.nav}>
-        <ul>
-            <li>
-                <a href="#">Tickets</a>
-            </li>
-            <li>
-                <a href="#">Evenements</a>
-            </li>
-            <li>
-                <a href="#">Emplacement</a>
-            </li>
-            <li>
-                <a href="#">Contact</a>
-            </li>
+export default function MenuNav({ setPage }) {
+
+  return (
+      <nav className={`${styles.nav}`}>
+        <ul className={`nav justify-content-center m-0 ${styles.nav}`}>
+
+          {/* Chaque lien de navigation appelle setPage avec le nom de la page correspondante lors du clic */}
+          
+          <li className="nav-item">
+            <a className="nav-link" href="#" onClick={() => setPage('Home')}>Home</a>
+          </li>
+          <li className="nav-item">
+            <a className="nav-link" href="#" onClick={() => setPage('Eve')}>Events</a>
+          </li>
+          <li className="nav-item">
+            <a className="nav-link" href="#" onClick={() => setPage('Contact')}>Contact</a>
+          </li>
+          <li className="nav-item">
+            <a className="nav-link" href="#" onClick={() => setPage('FAQ')}>FAQ</a>
+          </li>
         </ul>
-    </nav>
-}
+      </nav>
+    );
+  }
+  
