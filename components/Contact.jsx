@@ -1,9 +1,8 @@
 import { useState } from 'react';
-import styles from './Contact.module.css'
+import styles from './Contact.module.css';
+
 export default function Contact() {
-
     // Déclaration des états pour les champs du formulaire et les messages d'erreur/validation
-
     const [nom, setNom] = useState('');
     const [email, setEmail] = useState('');
     const [message, setMessage] = useState('');
@@ -12,8 +11,7 @@ export default function Contact() {
     const [errorMessage, setErrorMessage] = useState('');
     const [showSuccessMessage, setShowSuccessMessage] = useState(false);
 
-    // Fonction pour valider l'email 
-    
+    // Fonction pour valider l'email
     const validateEmail = (email) => {
         return email.match(
             /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@(([^<>()[\]\\.,;:\s@"]+\.)+[^<>()[\]\\.,;:\s@"]{2,})$/i
@@ -21,7 +19,6 @@ export default function Contact() {
     };
 
     // Fonction pour valider chaque champ du formulaire en temps réel
-
     const validateField = (field, value) => {
         switch (field) {
             case 'nom':
@@ -39,7 +36,6 @@ export default function Contact() {
     };
 
     // Gestion de la soumission du formulaire
-
     const handleSubmit = (e) => {
         e.preventDefault(); // Empêche le rechargement de la page
         if (nom && email && validateEmail(email) && message) {
@@ -47,15 +43,12 @@ export default function Contact() {
             setShowSuccessMessage(true);  // Affiche le message de succès
 
             // Réinitialise les champs
-
             setNom('');
             setEmail('');
             setMessage('');
             setTimeout(() => setShowSuccessMessage(false), 5000); // Cache le message de succès après 5 secondes
         } else {
-            
             // Valide chaque champ pour afficher les messages d'erreur si nécessaire
-
             validateField('nom', nom);
             validateField('email', email);
             validateField('message', message);
@@ -73,9 +66,7 @@ export default function Contact() {
                 )}
                 <div className="row mt-5">
                     <div className="col-md-6">
-                        
                         {/* Formulaire de contact avec validation et gestion des erreurs */}
-
                         <div className="bg-white p-4 rounded">
                             <h2 className='mb-5'>Envoyez-nous un message</h2>
                             <form onSubmit={handleSubmit}>
@@ -99,9 +90,7 @@ export default function Contact() {
                         </div>
                     </div>
                     <div className="col-md-6">
-
                         {/* Informations de contact */}
-                        
                         <div className="bg-white p-4 rounded">
                             <h2 className='mb-5'>Coordonnées</h2>
                             <p>Voici comment vous pouvez nous joindre :</p>

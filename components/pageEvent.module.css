@@ -1,32 +1,32 @@
-.eventImage{ /* Style pour la classe eventImage */
-    width: 100rem; /* Largeur maximale pour les images des événements */
-    max-height: 70rem; /* Hauteur maximale pour les images des événements */
+.eventImage { /* Style pour la classe eventImage */
+  width: 100rem; /* Largeur maximale pour les images des événements */
+  max-height: 70rem; /* Hauteur maximale pour les images des événements */
 }
 
-.eventImage img{ /* Style pour les images à l'intérieur de eventImage */
-    width: 100%; /* Largeur de l'image à 100% */
-    max-height: 60rem; /* Hauteur maximale pour les images des événements */
-    height: 100%; /* Hauteur de l'image à 100% */
+.eventImage img { /* Style pour les images à l'intérieur de eventImage */
+  width: 100%; /* Largeur de l'image à 100% */
+  max-height: 60rem; /* Hauteur maximale pour les images des événements */
+  height: 100%; /* Hauteur de l'image à 100% */
 }
 
 .ticketQuantity button { /* Styles pour les boutons de sélection de quantité de billets */
-    padding: 5px 10px; /* Espacement intérieur du bouton */
-    margin: 0 5px; /* Marge autour du bouton */
-    background-color: #ddd; /* Couleur de fond du bouton */
-    border: none; /* Pas de bordure */
-    cursor: pointer; /* Curseur de la souris au survol du bouton */
-    border-radius: px; /* Rayon de bordure */
-  }
-  
-  .ticketQuantity span { /* Style pour les spans dans ticketQuantity */
-    padding: 5px 10px; /* Espacement intérieur du span  */
-  }
-  
-  .submitButton { /* Styles pour le bouton de soumission */
-    padding: 10px 20px; /* Espacement intérieur du bouton */
-    background-color: red; /* Couleur de fond du bouton */
-    color: white; /* Couleur du texte du bouton */
-    border: none; /* Pas de bordure */
-    border-radius: 8px; /* Rayon de bordure de 8px */
-    cursor: pointer; /* Curseur de la souris au survol du bouton */
-  }
+  padding: 5px 10px; /* Espacement intérieur du bouton */
+  margin: 0 5px; /* Marge autour du bouton */
+  background-color: #ddd; /* Couleur de fond du bouton */
+  border: none; /* Pas de bordure */
+  cursor: pointer; /* Curseur de la souris au survol du bouton */
+  border-radius: 5px; /* Rayon de bordure */
+}
+
+.ticketQuantity span { /* Style pour les spans dans ticketQuantity */
+  padding: 5px 10px; /* Espacement intérieur du span */
+}
+
+.submitButton { /* Styles pour le bouton de soumission */
+  padding: 10px 20px; /* Espacement intérieur du bouton */
+  background-color: red; /* Couleur de fond du bouton */
+  color: white; /* Couleur du texte du bouton */
+  border: none; /* Pas de bordure */
+  border-radius: 8px; /* Rayon de bordure de 8px */
+  cursor: pointer; /* Curseur de la souris au survol du bouton */
+}
