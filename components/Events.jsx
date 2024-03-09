@@ -1,10 +1,18 @@
+'use client'
 import { useState } from 'react';
+import Link from 'next/link';
 import styles from './Events.module.css';
 import Image from 'next/image';
 import allEvents from '@/public/evenData/allEvents.json';
+import { setCurrentPageId } from '@/app/event/eventId';
 
 
-export default function Events({ setPage, setPageId }) {
+export default function Events() {
+
+  const handleClick = (eventId) => {
+    setCurrentPageId(eventId);
+  }
+
   // Gestion de l'état pour le contrôle de la pagination
   const [currentPage, setCurrentPage] = useState(1);
   const eventsPerPage = 2; // Nombre d'événements à afficher par page
@@ -28,16 +36,22 @@ export default function Events({ setPage, setPageId }) {
         {/* Mapping des événements de la page actuelle pour affichage */}
         {currentEvents.map((event) => (
           <div className={`col-sm-6 mb-5 text-center ${styles.divEvent}`} key={event.id}>
-            <a href="#" onClick={() => { setPage('pageEvent'); setPageId(event.id.toString()); }} className='text-center'>
-              <Image src={event.image} alt={`Image for ${event.title}`} className={`mb-5 ${styles.imgEv}`} priority={event.id === 1} width={1000} height={1000} />
-            </a>
+             <Link href={`/event`} passHref legacyBehavior>
+              <a className='text-center' onClick={() => setCurrentPageId(event.id)}>
+                <Image src={event.image} alt={`Image for ${event.title}`} className={`mb-5 ${styles.imgEv}`} priority={event.id === 1} width={1000} height={1000} />
+              </a>
+            </Link>
             <h2 className={`${styles.titre}`}>
-              <a href="#" onClick={() => { setPage('pageEvent'); setPageId(event.id.toString()); }} className={`text-white ${styles.titleEven}`}>{event.title}</a>
+              <Link href={`/event`} legacyBehavior>
+                <a className={`text-white ${styles.titleEven}`} onClick={() => setCurrentPageId(event.id)}>{event.title}</a>
+              </Link>
             </h2>
             <p className={`${styles.dateEven}`}>{event.date}</p>
             <div className="d-flex flex-column align-items-center mt-3">
               <p className={`description ${styles.descEven} mb-3 text-start`}>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cupiditate magni natus veritatis deserunt iste ut quidem in? Necessitatibus ratione voluptatem fugit officia labore modi nam, sint natus est iure vitae!</p>
-              <button onClick={() => { setPage('pageEvent'); setPageId(event.id.toString()); }} className={`${styles.btnEven} btn btn-danger w-100 mt-3`}>Take a Ticket</button>
+              <Link href={`/event`} className={`${styles.btnEven} w-100`} >
+                  <button className='btn btn-danger w-100 mt-3' onClick={() => setCurrentPageId(event.id)}>Take a ticket</button>
+              </Link>
             </div>
           </div>
         ))}

@@ -1,16 +1,7 @@
-/* Styles pour supprimer le padding du container-fluid */
-.container-fluid {
-    padding-left: 0 ; 
-    padding-right: 0 ; 
-}
-
-/* Styles de la barre de navigation */
 .nav {
     background-color: black; /* Couleur de fond de la barre de navigation */
     padding: 2rem 0; /* Ajoute un espace de remplissage en haut et en bas */
 }
-
-/* Styles pour la liste de la barre de navigation */
 .nav ul {
     display: flex; /* Affiche les éléments en ligne */
     align-items: center; /* Centre les éléments verticalement */
@@ -19,9 +10,9 @@
     padding: 0; /* Supprime le padding */
     margin: 0; /* Supprime les marges */
     list-style-type: none; /* Supprime les puces de liste */
+
 }
 
-/* Styles pour les liens de la barre de navigation */
 .nav a {
     color: azure; /* Couleur du texte des liens */
     text-decoration: none; /* Supprime la soulignement des liens */
@@ -29,16 +20,5 @@
     border-radius: 10px; /* Ajoute des coins arrondis aux liens */
     background-color: transparent; /* Couleur de fond transparente */
     transition: color 0.3s, background-color 0.3s; /* Transition fluide pour la couleur du texte et la couleur de fond */
-}
 
-/* Styles pour le survol et le focus des liens */
-.nav a:hover, .nav a:focus {
-    color: black; /* Couleur du texte au survol */
-    background-color: white; /* Couleur de fond au survol */
-}
-
-/* Styles pour les liens actifs */
-.activeLink {
-    color: black !important; /* Couleur du texte des liens actifs */
-    background-color: azure !important; /* Couleur de fond des liens actifs */
 }

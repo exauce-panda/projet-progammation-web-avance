@@ -13,6 +13,7 @@
 
 /* Styles pour les liens dans la description */
 .divDescription a {
+    color: aliceblue;
     text-decoration: none; /* Suppression du soulignement des liens */
     font-size: 2rem; /* Taille de police des liens */
 }

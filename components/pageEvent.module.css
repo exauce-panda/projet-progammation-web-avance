@@ -1,5 +1,5 @@
 .eventImage { /* Style pour la classe eventImage */
-  width: 100rem; /* Largeur maximale pour les images des événements */
+  max-width: 100rem; /* Largeur maximale pour les images des événements */
   max-height: 70rem; /* Hauteur maximale pour les images des événements */
 }
 
