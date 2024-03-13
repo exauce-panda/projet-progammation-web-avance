@@ -8,7 +8,7 @@ export default function Footer() {
     return (
         <footer className={`${styles.footer} text-center p-4 mt-1`}>
             <p>
-                Telephone : 613 742-2483
+                Telephone : 613 742 2483
             </p>
             <img src={logoX} alt="Logo X" />
             <img src={logoInstagram} alt="Logo Instagram" />
