@@ -1,51 +1,18 @@
-'use client'
+// Importation du composant Home depuis le fichier home.jsx
+import Home from './home';
 
-import styles from './Home.module.css';
-import DescAlpha from '@/components/DescriptionAlphaCenter';
-import MainEven from '@/components/MainEvent';
-import { useRouter } from "next/navigation"
+// Objet metadata pour stocker les métadonnées de la page, telles que le titre et la description
+// Ces métadonnées peuvent être utilisées pour améliorer le SEO de la page
+export const metadata = {
+  title: 'Accueil | AlphaCenter - Le cœur du divertissement',
+  description: 'Découvrez les plus grands jeux, spectacles, et moments inoubliables à AlphaCenter, la destination ultime pour le divertissement. Explorez nos événements à venir et plongez dans l\'expérience AlphaCenter.',
+};
 
-// Définition du composant Page qui représente la page d'accueil
-export default function Home({ setPage, setPageId }) {
-  
-  const router = useRouter();
-  
+// Composant fonctionnel Page qui sert de wrapper pour le composant Home
+// Ce composant peut être utilisé comme une page dans une application Next.js
+export default function Page() {
+  // Le composant retourne simplement le composant Home pour le rendu
   return (
-    <>
-      {/* Section contenant la description de l'Alpha Center */}
-      <div className={`container-fluid bg-dark py-4`}>
-        <DescAlpha />
-      </div>
-      
-      {/* Section affichant les événements principaux */}
-      <div className={`${styles.down} container-fluid py-4`}>
-        <MainEven setPage={setPage} setPageId={setPageId} />
-      </div>
-    </>
+    <Home />
   );
 }
-
-
-
-// import styles from './Home.module.css';
-// import DescAlpha from '@/components/DescriptionAlphaCenter';
-// import MainEven from '@/components/MainEvent';
-// 
-// // Définition du composant Page qui représente la page d'accueil
-// export default function Page({ setPage, setPageId }) {
-//   return (
-//     <>
-//       {/* Section contenant la description de l'Alpha Center */}
-//       <div className={`container-fluid bg-dark py-4`}>
-//         <DescAlpha />
-//       </div>
-      
-//       {/* Section affichant les événements principaux */}
-//       <div className={`${styles.down} container-fluid py-4`}>
-//         <MainEven setPage={setPage} setPageId={setPageId} />
-//       </div>
-//     </>
-//   );
-// }
-
-

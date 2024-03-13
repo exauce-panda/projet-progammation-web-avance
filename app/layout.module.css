@@ -1,16 +1,20 @@
-.notFound{
+/* Style pour éléments non trouvés */
+.notFound {
     font-size: xx-large; /* Définit la taille de la police pour les éléments avec la classe .notFound */
 }
+
+/* Styles responsifs pour les écrans très étroits */
 @media (max-width: 274px) {
     .principale {
-        min-width: 20rem; /* Définit la largeur minimale */
-        min-height: 100vh; /* Définit la hauteur minimale */
-        text-align: justify; /* Justifie le texte */
+        min-width: 20rem; /* Définit la largeur minimale pour assurer une largeur de base même sur des écrans très étroits */
+        min-height: 100vh; /* S'assure que l'élément prend au moins la hauteur complète de la fenêtre de visualisation */
+        text-align: justify; /* Justifie le texte pour une meilleure lecture sur des petits appareils */
     }
 }
 
-.bob{
-    padding-left: 0;
-    padding-right: 0;
-    padding-bottom: 0;
+/* Style pour la classe .bob, souvent utilisée pour les conteneurs principaux */
+.bob {
+    padding-left: 0; /* Enlève le padding gauche pour aligner le contenu avec les bords */
+    padding-right: 0; /* Enlève le padding droit pour aligner le contenu avec les bords */
+    padding-bottom: 0; /* Enlève le padding bas pour éviter un espace inutile en bas de l'élément */
 }

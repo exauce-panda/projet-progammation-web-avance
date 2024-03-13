@@ -1,52 +1,52 @@
+/* Styles pour les images des événements */
 .bob img {
-    max-width: 30rem; /* Largeur maximale des images */
-    max-height: 25rem; /* Hauteur maximale des images */
-    transition: 0.3s; /* Transition au survol de l'image */
-    padding: 10px;
+    max-width: 30rem; /* Limite la largeur maximale de l'image */
+    max-height: 25rem; /* Limite la hauteur maximale de l'image */
+    transition: 0.3s; /* Transition douce pour l'effet de survol */
+    padding: 10px; /* Espacement autour de l'image */
 }
 
-/* Animation au survol de l'image */
+/* Animation pour le survol de l'image */
 .bob img:hover {
-    transform: scale(1.03); /* Légère augmentation de la taille de l'image */
-    cursor: pointer; /* Curseur de la souris change en pointeur */
+    transform: scale(1.03); /* L'image s'agrandit légèrement au survol */
+    cursor: pointer; /* Change le curseur en pointeur pour indiquer la possibilité de cliquer */
 }
 
-/* Styles pour les liens dans la description */
+/* Styles pour les liens dans la description des événements */
 .divDescription a {
-    color: aliceblue;
-    text-decoration: none; /* Suppression du soulignement des liens */
-    font-size: 2rem; /* Taille de police des liens */
+    color: aliceblue; /* Couleur du texte des liens */
+    text-decoration: none; /* Supprime le soulignement des liens */
+    font-size: 2rem; /* Taille du texte des liens */
 }
 
-/* Effet au survol des liens dans la description */
+/* Effet de survol pour les liens dans la description */
 .divDescription a:hover {
-    text-decoration: underline; /* Soulignement des liens au survol */
+    text-decoration: underline; /* Souligne le texte au survol */
 }
 
-/* Styles pour le fond des div de description */
+/* Styles pour le fond des cartes d'événement */
 .bob .backDiv {
-    background-color: black; /* Couleur de fond des div de description */
-    color: azure; /* Couleur du texte des div de description */
-    margin: 0 auto;
-    width: 30rem;
-    height: 40rem;
-    border: 1px solid #333;
-
-}
-
-/* Styles pour les titres */
-.titre {
-    height: 5rem; /* Hauteur des titres */
-    margin-bottom: 1px; /* Marge inférieure des titres */
+    background-color: black; /* Couleur de fond */
+    color: azure; /* Couleur du texte */
+    margin: 0 auto; /* Centre la carte */
+    width: 30rem; /* Largeur fixe de la carte */
+    height: 40rem; /* Hauteur fixe de la carte */
+    border: 1px solid #333; /* Bordure de la carte */
 }
 
 /* Styles pour les titres des événements */
-.titleEven {
-    font-size: 2rem; /* Taille de police des titres des événements */
-    text-decoration: none; /* Suppression du soulignement des titres des événements */
+.titre {
+    height: 5rem; /* Hauteur du titre */
+    margin-bottom: 1px; /* Marge inférieure pour le titre */
 }
 
-/* Effet au survol des titres des événements */
+/* Styles spécifiques pour les titres des événements cliquables */
+.titleEven {
+    font-size: 2rem; /* Taille de la police pour les titres */
+    text-decoration: none; /* Suppression du soulignement */
+}
+
+/* Effet de survol pour les titres des événements cliquables */
 .titleEven:hover {
-    text-decoration: underline; /* Soulignement des titres des événements au survol */
+    text-decoration: underline; /* Ajoute un soulignement au survol */
 }

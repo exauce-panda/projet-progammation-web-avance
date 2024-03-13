@@ -1,32 +1,45 @@
-.eventImage { /* Style pour la classe eventImage */
-  max-width: 100rem; /* Largeur maximale pour les images des événements */
-  max-height: 70rem; /* Hauteur maximale pour les images des événements */
+/* Style pour la classe eventImage, appliqué au conteneur de l'image de l'événement */
+.eventImage {
+  max-width: 100rem; /* Définit une largeur maximale importante pour les images */
+  max-height: 70rem; /* Définit une hauteur maximale importante pour les images */
 }
 
-.eventImage img { /* Style pour les images à l'intérieur de eventImage */
-  width: 100%; /* Largeur de l'image à 100% */
-  max-height: 60rem; /* Hauteur maximale pour les images des événements */
-  height: 100%; /* Hauteur de l'image à 100% */
+/* Style appliqué directement aux images à l'intérieur des conteneurs .eventImage */
+.eventImage img {
+  width: 100%; /* Assure que l'image s'étend sur toute la largeur de son conteneur */
+  max-height: 60rem; /* Limite la hauteur de l'image pour une uniformité visuelle */
+  height: 100%; /* Permet à l'image de s'étendre verticalement à 100% de son conteneur */
 }
 
-.ticketQuantity button { /* Styles pour les boutons de sélection de quantité de billets */
-  padding: 5px 10px; /* Espacement intérieur du bouton */
-  margin: 0 5px; /* Marge autour du bouton */
-  background-color: #ddd; /* Couleur de fond du bouton */
-  border: none; /* Pas de bordure */
-  cursor: pointer; /* Curseur de la souris au survol du bouton */
-  border-radius: 5px; /* Rayon de bordure */
+/* Styles pour les boutons utilisés pour ajuster la quantité de tickets */
+.ticketQuantity button {
+  padding: 5px 10px; /* Ajoute un espacement intérieur pour une meilleure manipulation */
+  margin: 0 5px; /* Sépare légèrement les boutons les uns des autres */
+  background-color: #ddd; /* Utilise un gris doux comme fond pour indiquer une action possible */
+  border: none; /* Supprime les bordures par défaut pour un look moderne */
+  cursor: pointer; /* Change le curseur en pointeur pour indiquer la possibilité de cliquer */
+  border-radius: 5px; /* Adoucit les coins pour un design plus agréable */
 }
 
-.ticketQuantity span { /* Style pour les spans dans ticketQuantity */
-  padding: 5px 10px; /* Espacement intérieur du span */
+/* Style pour les éléments span à l'intérieur de .ticketQuantity, indiquant le nombre de tickets */
+.ticketQuantity span {
+  padding: 5px 10px; /* Ajoute un peu d'espacement intérieur pour une meilleure lisibilité */
 }
 
-.submitButton { /* Styles pour le bouton de soumission */
-  padding: 10px 20px; /* Espacement intérieur du bouton */
-  background-color: red; /* Couleur de fond du bouton */
-  color: white; /* Couleur du texte du bouton */
-  border: none; /* Pas de bordure */
-  border-radius: 8px; /* Rayon de bordure de 8px */
-  cursor: pointer; /* Curseur de la souris au survol du bouton */
+/* Styles pour le bouton de soumission, utilisé pour finaliser l'achat des tickets */
+.submitButton {
+  padding: 10px 20px; /* Rend le bouton plus grand pour une meilleure visibilité et facilité de clic */
+  background-color: red; /* Utilise une couleur vive pour inciter à l'action */
+  color: white; /* Assure que le texte est bien visible sur le fond coloré */
+  border: none; /* Supprime les bordures pour un look épuré */
+  border-radius: 8px; /* Adoucit davantage les coins que pour .ticketQuantity button */
+  cursor: pointer; /* Indique que le bouton est cliquable */
+}
+
+/* Style pour le conteneur principal dans le cas où aucun événement n'est trouvé */
+.main {
+  width: 100%; /* Utilise toute la largeur disponible */
+  height: 100vh; /* Assure que le conteneur prend au moins la hauteur de l'écran */
+  margin-top: 1px; /* Ajoute un petit décalage en haut pour séparer du contenu précédent */
+  padding-top: 20%; /* Ajoute un grand espacement en haut pour centrer le contenu dans la vue */
 }

@@ -1,4 +1,4 @@
-.pageEventMain { /* Style pour la classe pageEventMain */
-    background-color: black; /* Couleur de fond noire */
-    color: azure; /* Couleur du texte azure */
+.pageEventMain {
+    background-color: black; /* Définit un fond noir pour le composant */
+    color: azure; /* Assure une haute lisibilité avec du texte azure sur fond noir */
 }

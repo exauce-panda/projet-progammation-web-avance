@@ -2,20 +2,20 @@
 
 /* Styles pour l'identifiant du formulaire */
 .forumId {
-    height: 7rem;
+    height: 7rem; /* Définit la hauteur des conteneurs des champs du formulaire (nom et email) pour assurer une uniformité visuelle */
 }
 
 /* Styles pour le message du formulaire */
 .forumMessage {
-    height: 14rem;
+    height: 14rem; /* Définit une hauteur plus grande pour le conteneur du champ de texte du message, permettant d'accueillir un texte plus long */
 }
 
 /* Styles pour les appareils de petite taille */
 @media (max-width: 274px) {
-    /* Ajustement des styles pour la page de contact */
+    /* Ajustement des styles pour la page de contact sur des écrans très étroits */
     .pageContact {
-        min-width: 20rem;
-        min-height: 300vh;
-        text-align: start;
+        min-width: 20rem; /* Assure une largeur minimale pour le contenu, évitant ainsi qu'il ne devienne trop compact */
+        min-height: 300vh; /* Augmente considérablement la hauteur minimale pour accommoder un formulaire étendu verticalement sur de petits écrans */
+        text-align: start; /* Alignement du texte à gauche (start) pour une meilleure lisibilité sur de petits écrans */
     }
 }

@@ -1,4 +1,5 @@
-.all{
-    background-color: black;
-    color: azure;
+/* Styles pour le conteneur principal du composant Events */
+.all {
+    background-color: black; /* Couleur de fond du conteneur */
+    color: azure; /* Couleur du texte dans le conteneur */
 }

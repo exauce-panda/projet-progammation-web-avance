@@ -1,33 +1,38 @@
-'use client'
-import { useState } from 'react';
-import Image from 'next/image';
-import styles from './pageEvent.module.css';
-import allEvents from '@/public/evenData/allEvents.json';
-import { getCurrentPageId } from '@/app/event/eventId';
+'use client' // S'assure que le composant s'exécute uniquement côté client.
+
+import { useEffect, useState } from 'react'; // Importe useEffect et useState de React.
+import Image from 'next/image'; // Utilise le composant Image de Next.js pour une meilleure optimisation des images.
+import styles from './pageEvent.module.css'; // Importe les styles CSS spécifiques à PageEvent.
+import allEvents from '@/public/evenData/allEvents.json'; // Charge les données de tous les événements depuis un fichier JSON.
 
 export default function PageEvent() {
-    let event = parseInt(getCurrentPageId(), 10);
+    const [event, setEventId] = useState(null); // Stocke l'ID de l'événement actuel.
 
+    useEffect(() => {
+        // Récupère l'ID de l'événement stocké dans localStorage au montage du composant.
+        const storedEventId = localStorage.getItem('eventId');
+        if (storedEventId) {
+            setEventId(parseInt(storedEventId, 10)); // Convertit l'ID en nombre et met à jour l'état.
+        }
+    }, []);
+    
+    // Trouve l'événement actuel dans la liste des événements basé sur l'ID.
     const currentEvent = allEvents.find(e => e.id === event);
-    const [ticket, setTicket] = useState(1); // Le nombre actuel de tickets à acheter
-    const [ticketsBought, setTicketsBought] = useState(0); // Le nombre de tickets achetés, pour l'affichage dans l'alerte
-    const [showAlert, setShowAlert] = useState(false); // Pour contrôler l'affichage de l'alerte
+    
+    // Gère l'état pour le nombre de tickets et l'affichage de l'alerte.
+    const [ticket, setTicket] = useState(1); // Nombre de tickets à acheter.
+    const [ticketsBought, setTicketsBought] = useState(0); // Nombre de tickets achetés.
+    const [showAlert, setShowAlert] = useState(false); // Contrôle l'affichage de l'alerte.
 
-    const increment = () => {
-        setTicket(ticket >= 99 ? 99 : ticket + 1); // Incrémente le nombre de tickets jusqu'à 99
-    };
-
-    const decrement = () => {
-        setTicket(ticket <= 1 ? 1 : ticket - 1); // Décrémente le nombre de tickets, mais garde 1 comme minimum
-    };
+    // Fonctions pour incrémenter/décrémenter le nombre de tickets et gérer l'achat.
+    const increment = () => setTicket(ticket >= 99 ? 99 : ticket + 1);
+    const decrement = () => setTicket(ticket <= 1 ? 1 : ticket - 1);
 
     const handleBuyTicket = () => {
-        setTicketsBought(ticket); // Sauvegarde le nombre de tickets achetés avant réinitialisation
-        setShowAlert(true); // Affiche l'alerte
-        setTicket(1); // Réinitialise le nombre de tickets à acheter à 1 après la fermeture de l'alerte
-        setTimeout(() => {
-            setShowAlert(false); // Cache l'alerte après 5 secondes
-        }, 1000);
+        setTicketsBought(ticket); // Sauvegarde le nombre de tickets achetés.
+        setShowAlert(true); // Affiche l'alerte.
+        setTicket(1); // Réinitialise le nombre de tickets.
+        setTimeout(() => setShowAlert(false), 1000); // Cache l'alerte après 5 secondes.
     };
 
     return (
@@ -40,16 +45,15 @@ export default function PageEvent() {
                         </div>
                     )}
                     <div className={`${styles.eventImage} container mx-auto`}>
-                        <Image className={`img-fluid ${styles.bob}`} src={currentEvent.image} alt={`Image de ${currentEvent.title}`} width={1000} height={1000} />
+                        <Image src={currentEvent.image} alt={`Image de ${currentEvent.title}`} width={1000} height={1000} />
                     </div>
                     <h1 className={`my-5`}>{currentEvent.title}</h1>
                     <p className={`text-start`}>{currentEvent.date}</p>
                     <div className={`text-start my-3`}>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt maxime consectetur alias tempore totam corporis, illum ab, fugiat beatae eligendi labore deleniti quam expedita iusto delectus quae omnis incidunt id?
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem reiciendis dolores minus, beatae esse ut deleniti fugiat ab natus? Modi voluptates a saepe incidunt eaque provident illum quasi, ipsam cupiditate! Lorem 
-                            ipsum dolor sit amet, consectetur adipisicing elit. Maiores pariatur temporibus consequatur alias necessitatibus impedit cumque fuga assumenda eaque ducimus cupiditate, deserunt quisquam minus labore officia ad nisi itaque adipisci?
-                        </p>
+                        {/* Texte décrivant l'événement */}
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure temporibus pariatur magni harum laboriosam quia iste, voluptas placeat tenetur consequuntur beatae autem quod. Fugiat, sapiente voluptate autem repellat eos quos.
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate nihil tempore aperiam nulla mollitia reiciendis, eveniet doloribus iste, magnam, ipsum eum ut quasi ea obcaecati! Quae officiis molestias suscipit tempore!
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut enim nihil possimus illum nulla quae assumenda, doloribus explicabo. Iusto, quis? Recusandae sit modi placeat perspiciatis quaerat blanditiis corporis perferendis veritatis.
                     </div>
                     <div className={styles.ticketManagement}>
                         <div className={`${styles.ticketQuantity} my-3`}>
@@ -61,8 +65,8 @@ export default function PageEvent() {
                     </div>
                 </div>
             ) : (
-                <div className="container mx-auto py-5">
-                    <p className="text-center py-5">Événement introuvable</p>
+                <div className={`container mx-auto ${styles.main}`}>
+                    <p className="text-center">Événement introuvable</p>
                 </div>
             )}
         </div>

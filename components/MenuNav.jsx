@@ -1,14 +1,18 @@
-'use client'
-import styles from './MenuNav.module.css';
-import Link from 'next/link';
-import { usePathname } from 'next/navigation';
+'use client' // Indique que ce fichier doit être exécuté uniquement côté client
 
+import styles from './MenuNav.module.css'; // Importation des styles CSS pour ce composant
+import Link from 'next/link'; // Importation du composant Link de Next.js pour la navigation
+import { usePathname } from 'next/navigation'; // Importation du hook usePathname pour obtenir le chemin d'accès actuel
+
+// Définition du composant fonctionnel MenuNav
 export default function MenuNav() {
-  const pathname = usePathname();
+  const pathname = usePathname(); // Utilisation de usePathname pour déterminer le chemin d'accès actif
 
+  // Rendu du composant de navigation
   return (
-    <nav className={styles.nav}>
-      <ul className="nav justify-content-center m-0">
+    <nav className={styles.nav}> {/* Application des styles au composant nav */}
+      <ul className="nav justify-content-center m-0"> {/* Utilisation de classes Bootstrap pour le style et l'alignement */}
+        {/* Liste des liens de navigation */}
         <li>
           <Link href="/" className={pathname === '/' ? `bg-white text-dark` : 'nav-item'}>
               Accueil
@@ -33,37 +37,3 @@ export default function MenuNav() {
     </nav>
   );
 }
-
-
-
-
-
-// 'use client'
-// import styles from './MenuNav.module.css';
-// import Link from 'next/link'
-// import { usePathname } from 'next/navigation'
-
-// export default function MenuNav({ setPage }) {
-
-//   const pathname = usePathname();
-  
-//   return (
-//     <nav className={`${styles.nav}`}>
-//       <ul className={`nav justify-content-center m-0`}>
-//         {/* Chaque lien de navigation appelle setPage avec le nom de la page correspondante lors du clic */}
-//         <li className="nav-item">
-//           <a className="nav-link" href="#" onClick={() => setPage('Home')}>Accueil</a> {/* Lien vers la page d'accueil */}
-//         </li>
-//         <li className="nav-item">
-//           <a className="nav-link" href="#" onClick={() => setPage('Eve')}>Événements</a> {/* Lien vers la page des événements */}
-//         </li>
-//         <li className="nav-item">
-//           <a className="nav-link" href="#" onClick={() => setPage('Contact')}>Contact</a> {/* Lien vers la page de contact */}
-//         </li>
-//         <li className="nav-item">
-//           <a className="nav-link" href="#" onClick={() => setPage('FAQ')}>FAQ</a> {/* Lien vers la page de FAQ */}
-//         </li>
-//       </ul>
-//     </nav>
-//   );
-// }
