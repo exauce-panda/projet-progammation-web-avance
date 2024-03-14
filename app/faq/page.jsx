@@ -4,10 +4,19 @@ import FAQ from '@/components/Faq';
 
 // Définit les métadonnées pour la page FAQ. Ces informations peuvent être utilisées 
 // pour enrichir les balises <head> de la page, ce qui est crucial pour le SEO.
+
+/**
+ * @type {import("next").Metadata}
+ */
 export const metadata = {
     title: 'FAQ | AlphaCenter - Réponses à vos questions',
     description: 'Trouvez les réponses aux questions fréquemment posées sur AlphaCenter, nos événements, services, et bien plus. Nous sommes là pour vous aider à profiter pleinement de votre expérience.',
-};
+    openGraph: {
+        title: 'FAQ | AlphaCenter - Réponses à vos questions',
+        description: 'Trouvez les réponses aux questions fréquemment posées sur AlphaCenter, nos événements, services, et bien plus. Nous sommes là pour vous aider à profiter pleinement de votre expérience.',
+        images: ['/logo.png']
+    }
+}
 
 // Composant fonctionnel Faq qui sert de conteneur pour le composant FAQ.
 export default function Faq() {
