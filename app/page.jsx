@@ -15,7 +15,6 @@ export const metadata = {
     title: 'Accueil | AlphaCenter - Le cœur du divertissement',
     description: 'Découvrez les plus grands jeux, spectacles, et moments inoubliables à AlphaCenter, la destination ultime pour le divertissement. Explorez nos événements à venir et plongez dans l\'expérience AlphaCenter.',
     images: ['/logo.png']
-    
   }
 }
 
