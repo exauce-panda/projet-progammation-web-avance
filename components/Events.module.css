@@ -1,46 +1,41 @@
 /* Styles pour les images des événements */
 .imgEv {
-  max-width: 22rem; /* Largeur maximale de l'image */
-  width: 100%; /* Largeur de l'image à 100% */
-  height: 25rem; /* Hauteur de l'image */
-  margin-left: auto; /* Marge à gauche automatique */
-  margin-right: auto; /* Marge à droite automatique */
-  display: block; /* Affichage en bloc */
-  transition: 0.5s; /* Transition de 0.5 seconde pour les effets de survol */
+  max-width: 22rem; /* Largeur maximale pour assurer que les images ne soient pas trop grandes */
+  width: 100%; /* Assure que les images s'adaptent à la largeur de leur conteneur */
+  height: 25rem; /* Hauteur fixe pour uniformiser la présentation */
+  margin-left: auto; /* Centre l'image horizontalement */
+  margin-right: auto;
+  display: block; /* Nécessaire pour appliquer les marges automatiques */
+  transition: 0.5s; /* Effet de transition doux pour le survol */
 }
 
 /* Effet de survol pour les images */
 .imgEv:hover {
-  transform: scale(1.05); /* Agrandissement de l'image */
-  transition: 0.5s; /* Transition de 0.5 seconde */
+  transform: scale(1.05); /* Agrandit légèrement l'image au survol */
+  transition: 0.5s; /* Assure que la transition s'applique dans les deux sens */
 }
 
 /* Styles pour le titre des événements */
 .titre {
-  height: 5rem; /* Hauteur du titre */
-  margin-bottom: 1px; /* Marge en bas */
+  height: 5rem; /* Hauteur fixe pour uniformiser les titres */
+  margin-bottom: 1px; /* Réduit l'espace sous le titre */
 }
 
-/* Styles pour le titre des événements */
+/* Styles pour les titres des événements cliquables */
 .titleEven {
-  font-size: 2rem; /* Taille de police du titre */
-  text-decoration: none; /* Pas de décoration de texte par défaut */
+  font-size: 2rem; /* Augmente la taille de la police pour une meilleure lisibilité */
+  text-decoration: none; /* Supprime le soulignement par défaut des liens */
 }
 
-/* Effet de survol pour le titre des événements */
+/* Effet de survol pour les titres des événements */
 .titleEven:hover {
-  text-decoration: underline; /* Soulignement du texte au survol */
+  text-decoration: underline; /* Ajoute un soulignement au survol pour indiquer la cliquabilité */
 }
 
 /* Styles pour la date des événements */
 .dateEven {
-  padding-top: 2rem; /* Espacement en haut */
-  padding-bottom: 4rem; /* Espacement en bas */
-  width: 100%; /* Largeur de la date à 100% */
-  height: 50px; /* Hauteur de la date */
-}
-
-/* Styles pour le bouton des événements */
-.btnEven {
-  background-color: rebeccapurple; /* Couleur de fond du bouton */
+  padding-top: 2rem; /* Espacement au-dessus de la date */
+  padding-bottom: 4rem; /* Espacement sous la date pour séparer du contenu suivant */
+  width: 100%; /* Utilise toute la largeur disponible */
+  height: 50px; /* Hauteur fixe pour la date */
 }

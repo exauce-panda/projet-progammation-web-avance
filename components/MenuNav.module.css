@@ -1,38 +1,37 @@
-.container-fluid {
-    padding-left: 0 !important; /* Supprime le padding à gauche */
-    padding-right: 0 !important; /* Supprime le padding à droite */
-}
-  
+/* Styles de base pour le composant de navigation */
 .nav {
-    background-color: black; /* Couleur de fond de la barre de navigation */
-    padding: 2rem 0; /* Ajoute un espace de remplissage en haut et en bas */
+    background-color: black; /* Définit la couleur de fond de la barre de navigation */
+    padding: 2rem 0; /* Espacement vertical pour l'intérieur de la barre de navigation */
 }
-  
+
+@media (max-width: 374px) {
+    /* Ajustement des styles pour la page de contact sur des écrans très étroits */
+    .nav{
+        text-align: start;
+        min-width: 24rem;
+    }
+}
+
 .nav ul {
-    display: flex; /* Affiche les éléments en ligne */
-    align-items: center; /* Centre les éléments verticalement */
-    justify-content: center; /* Centre les éléments horizontalement */
-    gap: 20px; /* Ajoute un espacement entre les éléments */
-    padding: 0; /* Supprime le padding */
-    margin: 0; /* Supprime les marges */
+    display: flex; /* Les éléments de la liste sont disposés en ligne */
+    align-items: center; /* Centre les éléments de la liste verticalement */
+    justify-content: center; /* Centre les éléments de la liste horizontalement */
+    gap: 20px; /* Espacement entre les éléments de la liste */
+    padding: 0; /* Annule le padding par défaut de la liste */
+    margin: 0; /* Annule la marge par défaut de la liste */
     list-style-type: none; /* Supprime les puces de liste */
 }
-  
+
 .nav a {
-    color: azure; /* Couleur du texte des liens */
-    text-decoration: none; /* Supprime la soulignement des liens */
-    padding: 15px 7px; /* Ajoute un espacement autour du texte des liens */
-    border-radius: 10px; /* Ajoute des coins arrondis aux liens */
-    background-color: transparent; /* Couleur de fond transparente */
-    transition: color 0.3s, background-color 0.3s; /* Transition fluide pour la couleur du texte et la couleur de fond */
+    color: azure; /* Définit la couleur des liens */
+    text-decoration: none; /* Supprime le soulignement des liens */
+    padding: 15px 7px; /* Espacement autour du texte des liens */
+    border-radius: 10px; /* Coins arrondis pour les liens */
+    background-color: transparent; /* Fond transparent pour les liens */
+    transition: color 0.3s, background-color 0.3s; /* Transition fluide pour la couleur et le fond des liens */
 }
-  
-.nav a:hover, .nav a:focus {
-    color: black; /* Couleur du texte au survol */
-    background-color: white; /* Couleur de fond au survol */
-}
-  
-.activeLink {
-    color: black !important; /* Couleur du texte des liens actifs */
-    background-color: azure !important; /* Couleur de fond des liens actifs */
+
+.nav a:hover {
+    background-color: white; /* Fond blanc au survol des liens */
+    color: black; /* Texte noir au survol des liens */
 }

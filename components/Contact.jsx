@@ -1,9 +1,11 @@
-import { useState } from 'react';
-import styles from './Contact.module.css'
+'use client'
+// Assure que ce composant s'exécute uniquement côté client, permettant l'accès à des APIs telles que localStorage.
+
+import { useState } from 'react'; // Importe useState de React pour créer des états locaux.
+import styles from './Contact.module.css'; // Importe les styles spécifiques au composant Contact.
+
 export default function Contact() {
-
-    // Déclaration des états pour les champs du formulaire et les messages d'erreur/validation
-
+    // Déclaration des états pour stocker les valeurs des champs du formulaire et les messages d'erreur/validation.
     const [nom, setNom] = useState('');
     const [email, setEmail] = useState('');
     const [message, setMessage] = useState('');
@@ -12,50 +14,46 @@ export default function Contact() {
     const [errorMessage, setErrorMessage] = useState('');
     const [showSuccessMessage, setShowSuccessMessage] = useState(false);
 
-    // Fonction pour valider l'email 
-    
+    // Fonction pour valider l'adresse email à l'aide d'une expression régulière.
     const validateEmail = (email) => {
         return email.match(
             /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@(([^<>()[\]\\.,;:\s@"]+\.)+[^<>()[\]\\.,;:\s@"]{2,})$/i
         );
     };
 
-    // Fonction pour valider chaque champ du formulaire en temps réel
-
+    // Fonction pour valider chaque champ du formulaire en temps réel.
+    // Utilise une instruction switch pour gérer la logique de validation en fonction du champ spécifié.
     const validateField = (field, value) => {
         switch (field) {
             case 'nom':
-                setErrorNom(value ? '' : 'Veuillez entrer un nom.');
+                setErrorNom(value ? '' : 'Veuillez entrer un nom.'); // Définit ou efface le message d'erreur pour le champ nom.
                 break;
             case 'email':
-                setErrorEmail(value && validateEmail(value) ? '' : 'Veuillez entrer une adresse e-mail valide.');
+                setErrorEmail(value && validateEmail(value) ? '' : 'Veuillez entrer une adresse e-mail valide.'); // Définit ou efface le message d'erreur pour le champ email.
                 break;
             case 'message':
-                setErrorMessage(value ? '' : 'Veuillez entrer un message.');
+                setErrorMessage(value ? '' : 'Veuillez entrer un message.'); // Définit ou efface le message d'erreur pour le champ message.
                 break;
             default:
                 break;
         }
     };
 
-    // Gestion de la soumission du formulaire
-
+    // Gère la soumission du formulaire.
+    // Vérifie que tous les champs sont correctement remplis avant de simuler l'envoi du formulaire.
     const handleSubmit = (e) => {
-        e.preventDefault(); // Empêche le rechargement de la page
+        e.preventDefault(); // Empêche le comportement par défaut du formulaire (rechargement de la page).
         if (nom && email && validateEmail(email) && message) {
-            console.log('Form submitted', { nom, email, message }); // Simulation de l'envoi du formulaire
-            setShowSuccessMessage(true);  // Affiche le message de succès
-
-            // Réinitialise les champs
-
+            console.log('Form submitted', { nom, email, message }); // Simule l'envoi du formulaire avec les valeurs des champs.
+            setShowSuccessMessage(true); // Affiche le message de succès.
+            // Réinitialise les champs du formulaire.
             setNom('');
             setEmail('');
             setMessage('');
-            setTimeout(() => setShowSuccessMessage(false), 5000); // Cache le message de succès après 5 secondes
+            // Cache le message de succès après 5 secondes.
+            setTimeout(() => setShowSuccessMessage(false), 5000);
         } else {
-            
-            // Valide chaque champ pour afficher les messages d'erreur si nécessaire
-
+            // Valide à nouveau chaque champ pour s'assurer que les messages d'erreur sont affichés si nécessaire.
             validateField('nom', nom);
             validateField('email', email);
             validateField('message', message);
@@ -64,7 +62,7 @@ export default function Contact() {
 
     return (
         <>
-            <div className={`container ${styles.pageContact}`}>
+            <div className={`${styles.pageContact} container`}>
                 {/* Affichage conditionnel du message de succès */}
                 {showSuccessMessage && (
                     <div className="alert alert-success" role="alert" style={{ position: 'fixed', top: '10px', left: '50%', transform: 'translateX(-50%)', zIndex: 1050 }}>
@@ -73,12 +71,10 @@ export default function Contact() {
                 )}
                 <div className="row mt-5">
                     <div className="col-md-6">
-                        
-                        {/* Formulaire de contact avec validation et gestion des erreurs */}
-
                         <div className="bg-white p-4 rounded">
                             <h2 className='mb-5'>Envoyez-nous un message</h2>
                             <form onSubmit={handleSubmit}>
+                                {/* Champs du formulaire avec gestion des erreurs */}
                                 <div className={`mb-3 ${styles.forumId}`}>
                                     <label htmlFor="nom" className="form-label">Nom</label>
                                     <input type="text" className={`form-control ${errorNom ? 'is-invalid' : ''}`} id="nom" value={nom} onChange={(e) => { setNom(e.target.value); validateField('nom', e.target.value); }} />
@@ -99,9 +95,7 @@ export default function Contact() {
                         </div>
                     </div>
                     <div className="col-md-6">
-
                         {/* Informations de contact */}
-                        
                         <div className="bg-white p-4 rounded">
                             <h2 className='mb-5'>Coordonnées</h2>
                             <p>Voici comment vous pouvez nous joindre :</p>

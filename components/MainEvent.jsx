@@ -1,58 +1,47 @@
-import styles from './MainEvent.module.css'
-import Image from "next/legacy/image"
+// Importation des styles CSS et des composants nécessaires
+import styles from './MainEvent.module.css';
+import Image from 'next/image';
+import Link from 'next/link'; // Permet de créer des liens navigables sans recharger la page
+import allEvents from '@/public/evenData/allEvents.json'; // Charge la liste des événements depuis un fichier JSON local
 
+// Composant MainEvent pour afficher les événements principaux
+export default function MainEvent() {
 
-export default function MainEvent({setPage, allEvents, setPageId}) {
+  // Fonction pour gérer les clics sur les événements et stocker l'ID de l'événement dans localStorage
+  const handleClick = (eventId) => {
+    localStorage.setItem('eventId', eventId);
+  }
 
-    return (
-        // Conteneur principal pour les événements avec padding personnalisé
-
-        <div className={`container py-5 ${styles.bob}`}>
-
-            {/* Utilisation d'une grille pour organiser les cartes d'événements */}
-
-            <div className="row g-4">
-
-                {/* Itération sur le tableau allEvents pour générer une carte pour chaque événement */}
-
-                {allEvents.map((event) => (
-                    <div className="col-md-6 d-flex align-items-stretch" key={event.id}>
-
-                        {/* Carte contenant les détails de l'événement */}
-
-                        <div className={`card ${styles.backDiv} mb-5`}>
-
-                            {/* Lien cliquable pour naviguer vers le détail de l'événement */}
-
-                            <a href="#" onClick={() => { setPage('pageEvent'); setPageId(event.id.toString()); } } className='text-center'>
-                                
-                                {/* Image de l'événement avec priorité conditionnelle pour le premier événement */}
-
-                                <Image src={event.image} alt={`Event Image ${event.id}`} className="card-img-top mx-auto" priority={event.id === 1} />
-                            </a>
-
-                            {/* Corps de la carte contenant le titre, la date et une description de l'événement */}
-
-                            <div className={`${styles.divDescription} card-body mx-auto text-center mt-3 py-5`}>
-
-                                {/* Titre de l'événement comme lien cliquable */}
-
-                                <h2 className={`${styles.titre} `}>
-                                    <a href="#" onClick={() => { setPage('pageEvent'); setPageId(event.id.toString()); } } className={`text-white ${styles.titleEven}`} >{event.title}</a>
-                                </h2>
-                                
-                                {/* Date de l'événement */}
-
-                                <p className="card-text my-5 ">{event.date}</p>
-
-                                {/* Description de l'événement */}
-                                
-                                <p className="card-text text-start">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Blanditiis necessitatibus consectetur commodi cum pariatur aliquid? Soluta, sequi ab! Totam unde consequuntur maxime modi harum culpa ut voluptatum quisquam doloremque officiis!</p>
-                            </div>
-                        </div>
-                    </div>
-                ))}
+  // Rendu des événements
+  return (
+    <div className={`container ${styles.bob}`}>
+      <div className={`row`}>
+        {/* Boucle sur chaque événement pour afficher ses détails */}
+        {allEvents.map((event) => (
+          <div className="col-md-6 d-flex align-items-stretch" key={event.id}>
+            <div className={`card ${styles.backDiv} mb-5`}>
+              {/* Lien vers la page de l'événement */}
+              <Link href={`/event`} passHref legacyBehavior>
+                <a className='text-center' onClick={() => handleClick(event.id)}>
+                  {/* Image de l'événement */}
+                  <Image src={event.image} alt={`Event Image ${event.id}`} className="card-img-top mx-auto" priority={event.id === 1} width={1000} height={1000} />
+                </a>
+              </Link>
+              {/* Description de l'événement */}
+              <div className={`${styles.divDescription} card-body mx-auto text-center mt-3 py-1`}>
+                <h2 className={`${styles.titre}`}>
+                  {/* Titre de l'événement cliquable */}
+                  <Link href={`/event`} className={`text-white ${styles.titleEven}`} legacyBehavior>
+                    <a onClick={() => handleClick(event.id)}>{event.title}</a>
+                  </Link>
+                </h2>
+                {/* Date de l'événement */}
+                <p className="card-text pt-5 ">{event.date}</p>
+              </div>
             </div>
-        </div>
-    );
+          </div>
+        ))}
+      </div>
+    </div>
+  );
 }

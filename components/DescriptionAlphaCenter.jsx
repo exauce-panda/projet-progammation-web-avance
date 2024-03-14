@@ -1,28 +1,30 @@
+// Importation du fichier CSS spécifique au composant DescAlpha
 import styles from './DescriptionAlphaCenter.module.css';
+// Importation du composant Carousel pour afficher une série d'images ou de contenus
 import Carousel from "./CarouselDesc";
+// Importation du hook useState de React pour gérer l'état local du composant
 import { useState } from 'react';
 
-export default function DescAlpa(){
-
+// Définition du composant fonctionnel DescAlpha
+export default function DescAlpha() {
+    // Déclaration d'un état local pour contrôler l'affichage du texte complet ou réduit
     const [showFullText, setShowFullText] = useState(false);
 
-    // Fonction pour basculer entre l'affichage du texte complet et réduit
-
+    // Définition d'une fonction pour basculer entre l'affichage complet et réduit du texte
     const toggleReadMore = () => {
         setShowFullText(!showFullText);
     }
 
+    // Rendu du composant DescAlpha
     return (
-        <>
         <div className={styles.bob}>
+            {/* Insertion du composant Carousel pour la présentation d'images défilantes */}
             <Carousel />
-            <p className="text-white text-justify mx-auto my-5" style={{ maxWidth: '70%', fontSize: '1.2rem', lineHeight: '1.5' }}>
-
-                {/* Affichage conditionnel du texte complet ou réduit en fonction de l'état showFullText */}
-                
-                {
-                    showFullText ? (
-                        <>
+            <div className="text-white text-justify mx-auto my-5" style={{ maxWidth: '70%', fontSize: '1.2rem', lineHeight: '1.5' }}>
+                {/* Affichage conditionnel du texte : complet si showFullText est vrai, réduit sinon */}
+                {showFullText ? (
+                    <p>
+                        {/* Texte complet de la description de l'Alpha Center */}
                         Les plus grands jeux. Les plus grands
                         spectacles. Les meilleurs moments de la
                         capitale nationale se produisent ici.
@@ -45,23 +47,25 @@ export default function DescAlpa(){
                         l'architecte Christian de Portzamparc. Y sont
                         adjoints des locaux commerciaux dans 
                         l'enceinte du stade, ainsi que 33 000 m2 de
-                        bureaux.<br />
-                        <button onClick={toggleReadMore} className={`btn mt-3`}>Read Less</button>
-                        </>
-                    ) : (
-                        <>
+                        bureaux.
+                    </p>
+                ) : (
+                    <p>
+                        {/* Version raccourcie du texte pour inciter à lire plus */}
                         Les plus grands jeux. Les plus grands
                         spectacles. Les meilleurs moments de la
                         capitale nationale se produisent ici.
                         Jetez un œil en profondeur au lieu de 
                         divertissement de classe mondiale ...
-                        <br />
-                        <button onClick={toggleReadMore} className={`btn mt-3`}>Read More</button>
-                        </>
-                    )
-                }
-            </p>
+                    </p>
+                )}
+                <div className="text-center">
+                    {/* Bouton pour basculer l'affichage du texte */}
+                    <button onClick={toggleReadMore} className="btn mt-3">
+                        {showFullText ? 'Read Less' : 'Read More'}
+                    </button>
+                </div>
+            </div>
         </div>
-        </>
     );
 }
