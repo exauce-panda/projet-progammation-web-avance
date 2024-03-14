@@ -24,12 +24,15 @@ export default function RootLayout({ children }) {
 
   return (
     <html lang="en"> {/* Définit la langue de base pour le contenu */}
-      <body className={`${montserrat.className} ${styles.principal} d-flex flex-column`}>
-        <Header setPage={setPage} /> {/* Inclusion de l'entête */}
-        <main className={`${styles.bob} container-fluid flex-grow-1 min-vh-100`}>
-          {children} {/* Affiche le contenu enfant passé au composant Layout */}
-        </main>
-        <Footer /> {/* Inclusion du pied de page */}
+      <body className={`${montserrat.className}  d-flex flex-column`}>
+        
+        <div className={styles.principal}>
+          <Header setPage={setPage} /> {/* Inclusion de l'entête */}
+          <main className={`${styles.bob} container-fluid flex-grow-1 min-vh-100`}>
+            {children} {/* Affiche le contenu enfant passé au composant Layout */}
+          </main>
+          <Footer /> {/* Inclusion du pied de page */}
+        </div>
       </body>
     </html>
   );

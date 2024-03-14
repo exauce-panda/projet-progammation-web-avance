@@ -62,7 +62,7 @@ export default function Contact() {
 
     return (
         <>
-            <div className={`container ${styles.pageContact}`}>
+            <div className={`${styles.pageContact} container`}>
                 {/* Affichage conditionnel du message de succès */}
                 {showSuccessMessage && (
                     <div className="alert alert-success" role="alert" style={{ position: 'fixed', top: '10px', left: '50%', transform: 'translateX(-50%)', zIndex: 1050 }}>

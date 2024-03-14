@@ -1,12 +1,13 @@
 import Image from "next/legacy/image"; // Importation du composant Image de Next.js pour une gestion optimisée des images
 import logo from "@/public/logo.png"; // Importation du logo depuis les ressources publiques
 import MenuNav from "./MenuNav"; // Importation du composant de menu de navigation
+import styles from './Header.module.css';
 
 // Déclaration du composant fonctionnel Header qui accepte setPage comme prop
 export default function Header({ setPage }) {
   return (
     // Enveloppe tout le contenu de l'en-tête dans une balise <header>
-    <header>
+    <header className={styles.header}>
       {/* Barre de navigation Bootstrap pour un design réactif et stylé */}
       <nav className="navbar navbar-expand-lg navbar-light">
         {/* Container fluide pour une mise en page réactive et un alignement centré */}

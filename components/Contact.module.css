@@ -11,11 +11,10 @@
 }
 
 /* Styles pour les appareils de petite taille */
-@media (max-width: 274px) {
+@media (max-width: 374px) {
     /* Ajustement des styles pour la page de contact sur des écrans très étroits */
     .pageContact {
-        min-width: 20rem; /* Assure une largeur minimale pour le contenu, évitant ainsi qu'il ne devienne trop compact */
-        min-height: 300vh; /* Augmente considérablement la hauteur minimale pour accommoder un formulaire étendu verticalement sur de petits écrans */
-        text-align: start; /* Alignement du texte à gauche (start) pour une meilleure lisibilité sur de petits écrans */
+        min-width: 24rem; /* Assure une largeur minimale pour le contenu, évitant ainsi qu'il ne devienne trop compact */
+        height: 100rem;
     }
 }

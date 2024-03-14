@@ -1,5 +1,6 @@
 // Importation du composant Home depuis le fichier home.jsx
 import Home from './home';
+import styles from './page.module.css';
 
 // Objet metadata pour stocker les métadonnées de la page, telles que le titre et la description
 // Ces métadonnées peuvent être utilisées pour améliorer le SEO de la page
@@ -13,6 +14,8 @@ export const metadata = {
 export default function Page() {
   // Le composant retourne simplement le composant Home pour le rendu
   return (
-    <Home />
+    <div className={styles.home}>
+      <Home />
+    </div>
   );
 }

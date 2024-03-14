@@ -3,6 +3,15 @@
     background-color: black; /* Définit la couleur de fond de la barre de navigation */
     padding: 2rem 0; /* Espacement vertical pour l'intérieur de la barre de navigation */
 }
+
+@media (max-width: 374px) {
+    /* Ajustement des styles pour la page de contact sur des écrans très étroits */
+    .nav{
+        text-align: start;
+        min-width: 24rem;
+    }
+}
+
 .nav ul {
     display: flex; /* Les éléments de la liste sont disposés en ligne */
     align-items: center; /* Centre les éléments de la liste verticalement */

@@ -1,0 +1,6 @@
+@media (max-width: 374px) {
+    /* Ajustement des styles pour la page de contact sur des écrans très étroits */
+    .home {
+        min-width: 24rem;
+    }
+}
