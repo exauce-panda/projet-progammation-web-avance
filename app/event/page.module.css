@@ -2,4 +2,6 @@
 .all {
     background-color: black; /* Couleur de fond du conteneur */
     color: azure; /* Couleur du texte dans le conteneur */
+    padding-bottom: 100%;
+
 }

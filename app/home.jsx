@@ -21,7 +21,7 @@ export default function Home() {
       </div>
       
       {/* Section affichant les événements principaux */}
-      <div className={`${styles.down} container-fluid py-4`}>
+      <div className={`${styles.down} container-fluid py-5`}>
         <MainEven /> {/* Composant pour les événements principaux */}
       </div>
     </>
