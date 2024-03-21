@@ -9,12 +9,10 @@ import { useState } from 'react';
 export default function DescAlpha() {
     // Déclaration d'un état local pour contrôler l'affichage du texte complet ou réduit
     const [showFullText, setShowFullText] = useState(false);
-
     // Définition d'une fonction pour basculer entre l'affichage complet et réduit du texte
     const toggleReadMore = () => {
         setShowFullText(!showFullText);
     }
-
     // Rendu du composant DescAlpha
     return (
         <div className={styles.bob}>
@@ -22,10 +20,10 @@ export default function DescAlpha() {
             <Carousel />
             <div className="text-white text-justify mx-auto my-5" style={{ maxWidth: '70%', fontSize: '1.2rem', lineHeight: '1.5' }}>
                 {/* Affichage conditionnel du texte : complet si showFullText est vrai, réduit sinon */}
-                {showFullText ? (
-                    <p>
-                        {/* Texte complet de la description de l'Alpha Center */}
-                        Les plus grands jeux. Les plus grands
+                <p>
+                    {showFullText ? (
+                        // Texte complet de la description de l'Alpha Center
+                        `Les plus grands jeux. Les plus grands
                         spectacles. Les meilleurs moments de la
                         capitale nationale se produisent ici.
                         Jetez un œil en profondeur au lieu de 
@@ -39,26 +37,24 @@ export default function DescAlpha() {
                         toit permanent, les rencontres de rugby se
                         jouant sur une pelouse synthétique. Le choix
                         du toit est lié à des raisons d'acoustique,
-                        « Le système d’ouverture et de fermeture 
+                        "Le système d’ouverture et de fermeture 
                         n’aurait pas permis une étanchéité suffisante,
                         au niveau décibels, pour respecter la 
                         tranquillité des habitants lors d’un concert 
-                        des Rolling Stones par exemple » selon 
+                        des Rolling Stones par exemple" selon 
                         l'architecte Christian de Portzamparc. Y sont
                         adjoints des locaux commerciaux dans 
                         l'enceinte du stade, ainsi que 33 000 m2 de
-                        bureaux.
-                    </p>
-                ) : (
-                    <p>
-                        {/* Version raccourcie du texte pour inciter à lire plus */}
-                        Les plus grands jeux. Les plus grands
+                        bureaux.`
+                    ) : (
+                        // Version raccourcie du texte pour inciter à lire plus
+                        `Les plus grands jeux. Les plus grands
                         spectacles. Les meilleurs moments de la
                         capitale nationale se produisent ici.
                         Jetez un œil en profondeur au lieu de 
-                        divertissement de classe mondiale ...
-                    </p>
-                )}
+                        divertissement de classe mondiale ...`
+                    )}
+                </p>
                 <div className="text-center">
                     {/* Bouton pour basculer l'affichage du texte */}
                     <button onClick={toggleReadMore} className="btn mt-3">

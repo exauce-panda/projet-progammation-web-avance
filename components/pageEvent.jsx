@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react'; // Importe useEffect et useState de React.
 import Image from 'next/image'; // Utilise le composant Image de Next.js pour une meilleure optimisation des images.
 import styles from './pageEvent.module.css'; // Importe les styles CSS spécifiques à PageEvent.
-import allEvents from '@/public/evenData/allEvents.json'; // Charge les données de tous les événements depuis un fichier JSON.
+import allEvents from '@/public/evenData/allEventsEvent.json'; // Charge les données de tous les événements depuis un fichier JSON.
 
 export default function PageEvent() {
     const [event, setEventId] = useState(null); // Stocke l'ID de l'événement actuel.
@@ -45,8 +45,10 @@ export default function PageEvent() {
                         </div>
                     )}
                     <div className={`${styles.eventImage} container mx-auto`}>
-                        <Image src={currentEvent.image} alt={`Image de ${currentEvent.title}`} width={1000} height={1000} />
+                        <Image src={currentEvent.image} alt={`Image de ${currentEvent.title}`} width={currentEvent.width} height={currentEvent.height} priority = {true} sizes="(max-width: 425px) 380px"/>
                     </div>
+
+                    <div className={`${styles.eventDown} container mx-auto`}>
                     <h1 className={`my-5`}>{currentEvent.title}</h1>
                     <p className={`text-start`}>{currentEvent.date}</p>
                     <div className={`text-start my-3`}>
@@ -55,13 +57,14 @@ export default function PageEvent() {
                         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate nihil tempore aperiam nulla mollitia reiciendis, eveniet doloribus iste, magnam, ipsum eum ut quasi ea obcaecati! Quae officiis molestias suscipit tempore!
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut enim nihil possimus illum nulla quae assumenda, doloribus explicabo. Iusto, quis? Recusandae sit modi placeat perspiciatis quaerat blanditiis corporis perferendis veritatis.
                     </div>
+                    </div>
                     <div className={styles.ticketManagement}>
                         <div className={`${styles.ticketQuantity} my-3`}>
                             <button onClick={increment}>+</button>
                             <span>{ticket}</span>
                             <button onClick={decrement}>-</button>
                         </div>
-                        <button className={`mb-5 ${styles.submitButton}`} onClick={handleBuyTicket}>Acheter ticket</button>
+                        <button className={`mb-5 bg-dark ${styles.submitButton}`} onClick={handleBuyTicket}>Acheter ticket</button>
                     </div>
                 </div>
             ) : (

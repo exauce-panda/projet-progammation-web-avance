@@ -1,8 +1,11 @@
+.imgDiv{
+  height: 40rem;
+  overflow: hidden;
+  margin-bottom: 5rem;
+}
+
 /* Styles pour les images des événements */
 .imgEv {
-  max-width: 22rem; /* Largeur maximale pour assurer que les images ne soient pas trop grandes */
-  width: 100%; /* Assure que les images s'adaptent à la largeur de leur conteneur */
-  height: 25rem; /* Hauteur fixe pour uniformiser la présentation */
   margin-left: auto; /* Centre l'image horizontalement */
   margin-right: auto;
   display: block; /* Nécessaire pour appliquer les marges automatiques */

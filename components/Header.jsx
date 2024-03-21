@@ -4,7 +4,7 @@ import MenuNav from "./MenuNav"; // Importation du composant de menu de navigati
 import styles from './Header.module.css';
 
 // Déclaration du composant fonctionnel Header qui accepte setPage comme prop
-export default function Header({ setPage }) {
+export default function Header() {
   return (
     // Enveloppe tout le contenu de l'en-tête dans une balise <header>
     <header className={styles.header}>
@@ -28,7 +28,7 @@ export default function Header({ setPage }) {
       <div className="bg-dark text-white">
         <div>
           {/* Insertion du composant MenuNav, setPage permet de gérer le changement de page */}
-          <MenuNav setPage={setPage} />
+          <MenuNav />
         </div>
       </div>
     </header>
