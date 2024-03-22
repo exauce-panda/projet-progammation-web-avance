@@ -2,3 +2,9 @@
 
 /* Styles généraux du carousel */
 
+.carou{
+    max-width: 50rem;
+    max-height: 28rem;
+    overflow: hidden;
+    margin: 0 auto;
+}

@@ -1,31 +1,19 @@
-.eventImage{
-  max-width: 50rem;
+.eventPageContainer{
+  width: 100%;
+  min-height: 100vh;
+}
+
+.eventImage {
+  width: 100%;
+}
+.eventImage img{
+  max-width: 20rem;
   height: auto;
 }
 
-.eventImage img{
-  width: 100%;
-  height: 100%;
-  margin: 0 auto;
-}
-
 .eventDown{
-  max-width: 50rem;
+  max-width: 30rem;
 }
-
-@media (max-width: 425px) {
-  /* Ajustement des styles pour la page de contact sur des écrans très étroits */
-  
-  .eventPageContainer{
-    width: 100%;
-  }
-  .eventImage{
-    max-width: 25rem;
-  }
-}
-
-
-
 
 /* Styles pour les boutons utilisés pour ajuster la quantité de tickets */
 .ticketQuantity button {

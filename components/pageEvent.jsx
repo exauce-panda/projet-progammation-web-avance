@@ -1,5 +1,4 @@
 'use client' // S'assure que le composant s'exécute uniquement côté client.
-
 import { useEffect, useState } from 'react'; // Importe useEffect et useState de React.
 import Image from 'next/image'; // Utilise le composant Image de Next.js pour une meilleure optimisation des images.
 import styles from './pageEvent.module.css'; // Importe les styles CSS spécifiques à PageEvent.
@@ -44,19 +43,18 @@ export default function PageEvent() {
                             Vous avez acheté {ticketsBought} ticket(s) avec succès.
                         </div>
                     )}
-                    <div className={`${styles.eventImage} container mx-auto`}>
-                        <Image src={currentEvent.image} alt={`Image de ${currentEvent.title}`} width={currentEvent.width} height={currentEvent.height} priority = {true} sizes="(max-width: 425px) 380px"/>
+                    <div className={`${styles.eventImage} container`}>
+                        <Image src={currentEvent.image} alt={`Image de ${currentEvent.title}`} width={currentEvent.width} height={currentEvent.height} priority = {true} />
                     </div>
-
                     <div className={`${styles.eventDown} container mx-auto`}>
-                    <h1 className={`my-5`}>{currentEvent.title}</h1>
-                    <p className={`text-start`}>{currentEvent.date}</p>
-                    <div className={`text-start my-3`}>
-                        {/* Texte décrivant l'événement */}
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure temporibus pariatur magni harum laboriosam quia iste, voluptas placeat tenetur consequuntur beatae autem quod. Fugiat, sapiente voluptate autem repellat eos quos.
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate nihil tempore aperiam nulla mollitia reiciendis, eveniet doloribus iste, magnam, ipsum eum ut quasi ea obcaecati! Quae officiis molestias suscipit tempore!
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut enim nihil possimus illum nulla quae assumenda, doloribus explicabo. Iusto, quis? Recusandae sit modi placeat perspiciatis quaerat blanditiis corporis perferendis veritatis.
-                    </div>
+                        <h1 className={`my-5`}>{currentEvent.title}</h1>
+                        <p className={`text-start`}>{currentEvent.date}</p>
+                        <div className={`text-start my-3`}>
+                            {/* Texte décrivant l'événement */}
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure temporibus pariatur magni harum laboriosam quia iste, voluptas placeat tenetur consequuntur beatae autem quod. Fugiat, sapiente voluptate autem repellat eos quos.
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate nihil tempore aperiam nulla mollitia reiciendis, eveniet doloribus iste, magnam, ipsum eum ut quasi ea obcaecati! Quae officiis molestias suscipit tempore!
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut enim nihil possimus illum nulla quae assumenda, doloribus explicabo. Iusto, quis? Recusandae sit modi placeat perspiciatis quaerat blanditiis corporis perferendis veritatis.
+                        </div>
                     </div>
                     <div className={styles.ticketManagement}>
                         <div className={`${styles.ticketQuantity} my-3`}>

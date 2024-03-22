@@ -21,7 +21,7 @@ export default function CarouselAlpha() {
                                 width={src.width}
                                 height={src.height}
                                 layout='responsive'
-                                sizes="(max-width: 425px) 3800px, 100vw"
+                                /*sizes="(max-width: 425px) 380px"*/
                                 priority={src.priority}
                             />
                         </div>
