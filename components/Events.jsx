@@ -1,10 +1,9 @@
 'use client' // Indique que ce composant s'exécute uniquement côté client.
-
 import { useState } from 'react'; // Importation du hook d'état de React.
 import Link from 'next/link'; // Importation du composant Link de Next.js pour la navigation.
 import styles from './Events.module.css'; // Importation des styles CSS spécifiques à Events.
 import Image from 'next/image'; // Importation du composant Image de Next.js pour l'optimisation des images.
-import allEvents from '@/public/evenData/allEvents.json'; // Importation des données des événements depuis un fichier JSON local.
+import allEvents from '@/public/evenData/allEventsEvs.json'; // Importation des données des événements depuis un fichier JSON local.
 
 // Définition du composant fonctionnel Events.
 export default function Events() {
@@ -34,11 +33,13 @@ export default function Events() {
         {/* Mapping sur la liste d'événements pour les afficher */}
         {currentEvents.map((event) => (
           <div className={`col-sm-6 mb-5 text-center ${styles.divEvent}`} key={event.id}>
-            <Link href={`/event`} passHref legacyBehavior>
-              <a onClick={() => handleClick(event.id)} className='text-center'>
-                <Image src={event.image} alt={`Image for ${event.title}`} className={`mb-5 ${styles.imgEv}`} priority={event.id === 1} width={1000} height={1000} />
-              </a>
-            </Link>
+            <div className={` ${styles.imgDiv} mx-auto`}>
+              <Link href={`/event`} passHref legacyBehavior>
+                <a onClick={() => handleClick(event.id)} className='text-center'>
+                  <Image src={event.image} alt={`Image for ${event.title}`} className={`mb-5 ${styles.imgEv}`} priority={event.priority} width={event.width} height={event.height} sizes="(max-width: 425px) 400px" layout='responsive' />
+                </a>
+              </Link>
+            </div>
             <h2 className={`${styles.titre}`}>
               <Link href={`/event`} legacyBehavior>
                 <a onClick={() => handleClick(event.id)} className={`text-white ${styles.titleEven}`}>{event.title}</a>

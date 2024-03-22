@@ -11,15 +11,18 @@ export default function CarouselAlpha() {
         <Carousel className={`${styles.carou} mx-auto`}>
             { // Boucle sur le tableau des images pour créer un item de carrousel pour chaque image
                 carrouImages.map((src, index) => (
-                    <Carousel.Item key={index}> // Utilisation de l'index comme clé unique pour chaque item du carrousel
-                        <div className={`${styles.carouImageContainer} d-block`}> // Conteneur pour l'image, applique un style spécifique et rend l'image en display block
+                    <Carousel.Item key={index}>
+                        <div className={`${styles.carouImage} d-block`}>
                             {/* Utilisation du composant Image de Next.js pour optimiser le chargement des images */}
                             <Image 
-                                src={src} 
+                                src={src.src}
+                                className={styles.carouI} 
                                 alt={`Slide ${index + 1}`} // Description alternative pour chaque image, pour l'accessibilité et le SEO
-                                layout='fill' // Indique à l'image de remplir l'espace du conteneur parent
-                                className={styles.carouImage} // Applique des styles spécifiques à l'image
-                                priority // Charge les images du carrousel en priorité
+                                width={src.width}
+                                height={src.height}
+                                layout='responsive'
+                                /*sizes="(max-width: 425px) 380px"*/
+                                priority={src.priority}
                             />
                         </div>
                     </Carousel.Item>

@@ -1,5 +1,4 @@
 'use client' // Assure que le composant s'exécute uniquement côté client.
-
 // Importation des styles CSS spécifiques à la FAQ.
 import styles from './Faq.module.css';
 import { useEffect } from 'react'; // Importation de useEffect pour exécuter du code après le montage du composant.

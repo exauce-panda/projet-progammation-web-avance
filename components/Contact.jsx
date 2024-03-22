@@ -1,6 +1,5 @@
 'use client'
 // Assure que ce composant s'exécute uniquement côté client, permettant l'accès à des APIs telles que localStorage.
-
 import { useState } from 'react'; // Importe useState de React pour créer des états locaux.
 import styles from './Contact.module.css'; // Importe les styles spécifiques au composant Contact.
 

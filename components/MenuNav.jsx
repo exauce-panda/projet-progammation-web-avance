@@ -1,5 +1,4 @@
 'use client' // Indique que ce fichier doit être exécuté uniquement côté client
-
 import styles from './MenuNav.module.css'; // Importation des styles CSS pour ce composant
 import Link from 'next/link'; // Importation du composant Link de Next.js pour la navigation
 import { usePathname } from 'next/navigation'; // Importation du hook usePathname pour obtenir le chemin d'accès actuel

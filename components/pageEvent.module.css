@@ -1,14 +1,18 @@
-/* Style pour la classe eventImage, appliqué au conteneur de l'image de l'événement */
-.eventImage {
-  max-width: 100rem; /* Définit une largeur maximale importante pour les images */
-  max-height: 70rem; /* Définit une hauteur maximale importante pour les images */
+.eventPageContainer{
+  width: 100%;
+  min-height: 100vh;
 }
 
-/* Style appliqué directement aux images à l'intérieur des conteneurs .eventImage */
-.eventImage img {
-  width: 100%; /* Assure que l'image s'étend sur toute la largeur de son conteneur */
-  max-height: 60rem; /* Limite la hauteur de l'image pour une uniformité visuelle */
-  height: 100%; /* Permet à l'image de s'étendre verticalement à 100% de son conteneur */
+.eventImage {
+  width: 100%;
+}
+.eventImage img{
+  max-width: 20rem;
+  height: auto;
+}
+
+.eventDown{
+  max-width: 30rem;
 }
 
 /* Styles pour les boutons utilisés pour ajuster la quantité de tickets */
@@ -29,7 +33,6 @@
 /* Styles pour le bouton de soumission, utilisé pour finaliser l'achat des tickets */
 .submitButton {
   padding: 10px 20px; /* Rend le bouton plus grand pour une meilleure visibilité et facilité de clic */
-  background-color: red; /* Utilise une couleur vive pour inciter à l'action */
   color: white; /* Assure que le texte est bien visible sur le fond coloré */
   border: none; /* Supprime les bordures pour un look épuré */
   border-radius: 8px; /* Adoucit davantage les coins que pour .ticketQuantity button */

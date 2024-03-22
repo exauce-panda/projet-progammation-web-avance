@@ -1,5 +1,4 @@
 'use client' // Indique que ce composant doit s'exécuter uniquement côté client.
-
 import { useEffect } from 'react'; // Importation de useEffect de React pour exécuter du code après le rendu du composant
 
 // Définition du composant MyComponent
